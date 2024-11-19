@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var navigationRouter = NavigationRouter()
+    
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $navigationRouter.path) {
             ZStack {
                 Color.red.opacity(0.3)
                     .ignoresSafeArea()
@@ -25,11 +28,21 @@ struct ContentView: View {
                         Spacer()
                         
                         Button("Next") {
-                            
+                            navigationRouter.push(.FirstView)
                         }
                         .buttonStyle(.custom())
                     }
                     .padding()
+                }
+            }
+            .navigationDestination(for: Route.self) { route in
+                switch route {
+                    case .FirstView:
+                        FirstView()
+                    case .SecondView:
+                        SecondView()
+                    case .ThirdView:
+                        ThirdView()
                 }
             }
         }

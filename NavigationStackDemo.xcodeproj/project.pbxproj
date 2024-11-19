@@ -11,6 +11,7 @@
 		291F0BD82CEB6FA0001EFE1A /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F0BD72CEB6FA0001EFE1A /* SecondView.swift */; };
 		291F0BDA2CEB6FAA001EFE1A /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F0BD92CEB6FAA001EFE1A /* ThirdView.swift */; };
 		2976D6142CE8685A00551D1D /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976D6132CE8685A00551D1D /* ButtonStyles.swift */; };
+		29905B592CECBC3200C7353B /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29905B582CECBC3200C7353B /* NavigationRouter.swift */; };
 		29E9C98A2CE3780F00523C98 /* NavigationStackDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E9C9892CE3780F00523C98 /* NavigationStackDemoApp.swift */; };
 		29E9C98C2CE3780F00523C98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E9C98B2CE3780F00523C98 /* ContentView.swift */; };
 		29E9C98E2CE3781100523C98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29E9C98D2CE3781100523C98 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		291F0BD72CEB6FA0001EFE1A /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		291F0BD92CEB6FAA001EFE1A /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
 		2976D6132CE8685A00551D1D /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		29905B582CECBC3200C7353B /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		29E9C9862CE3780F00523C98 /* NavigationStackDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationStackDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29E9C9892CE3780F00523C98 /* NavigationStackDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackDemoApp.swift; sourceTree = "<group>"; };
 		29E9C98B2CE3780F00523C98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,22 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		29905B562CECBC1100C7353B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				29905B572CECBC1A00C7353B /* Navigation */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		29905B572CECBC1A00C7353B /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				29905B582CECBC3200C7353B /* NavigationRouter.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		29E9C97D2CE3780F00523C98 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +103,7 @@
 		29E9C9882CE3780F00523C98 /* NavigationStackDemo */ = {
 			isa = PBXGroup;
 			children = (
+				29905B562CECBC1100C7353B /* Common */,
 				291F0BD42CEB6E5F001EFE1A /* Views */,
 				2976D6112CE8683800551D1D /* Components */,
 				29E9C9892CE3780F00523C98 /* NavigationStackDemoApp.swift */,
@@ -174,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29E9C98C2CE3780F00523C98 /* ContentView.swift in Sources */,
+				29905B592CECBC3200C7353B /* NavigationRouter.swift in Sources */,
 				291F0BD82CEB6FA0001EFE1A /* SecondView.swift in Sources */,
 				291F0BD62CEB6F8E001EFE1A /* FirstView.swift in Sources */,
 				2976D6142CE8685A00551D1D /* ButtonStyles.swift in Sources */,
