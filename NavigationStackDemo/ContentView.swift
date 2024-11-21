@@ -39,16 +39,21 @@ struct ContentView: View {
                 switch route {
                     case .FirstView:
                         FirstView()
+                            .navigationBarBackButtonHidden()
                     case .SecondView:
                         SecondView()
+                            .navigationBarBackButtonHidden()
                     case .ThirdView:
                         ThirdView()
+                            .navigationBarBackButtonHidden()
                 }
             }
         }
+        .environment(navigationRouter)
     }
 }
 
 #Preview {
     ContentView()
+        .environment(NavigationRouter())
 }

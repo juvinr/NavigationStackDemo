@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ThirdView: View {
+    
+    @Environment(NavigationRouter.self) var navigationRouter
+    
     var body: some View {
         ZStack {
             Color.yellow.opacity(0.3)
@@ -22,12 +25,12 @@ struct ThirdView: View {
                 
                 HStack {
                     Button("Back") {
-                        
+                        navigationRouter.pop()
                     }
                     .buttonStyle(.custom(background: .gray))
                     
                     Button("Home") {
-                        
+                        navigationRouter.popToRoot()
                     }
                     .buttonStyle(.custom())
                 }
@@ -39,4 +42,5 @@ struct ThirdView: View {
 
 #Preview {
     ThirdView()
+        .environment(NavigationRouter())
 }
